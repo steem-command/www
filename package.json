@@ -1,0 +1,82 @@
+{
+  "name": "steem-cmd",
+  "version": "1.0.0",
+  "description": "[![Pull requests](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/peerquery/beta/pulls)\r [![Build status](https://travis-ci.org/peerquery/beta.svg?branch=master)](https://travis-ci.org/peerquery/beta)\r [![Dep tracker](https://david-dm.org/peerquery/beta.svg)](https://david-dm.org/peerquery/beta)\r [![Codebase license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/peerquery/beta/blob/master/LICENSE)\r [![Chat](https://img.shields.io/badge/Chat-Discord-ff69b4.svg)](https://https://discord.gg/xeSnGc8)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lintfix": "eslint \"**/*.js\" --fix",
+    "lint": "eslint \"**/*.js\"",
+    "lintstaged": "lint-staged",
+    "test": "npm run lint",
+    "build": "webpack",
+    "dbuild": "set NODE_ENV=debug && webpack",
+    "qbuild": "set NODE_ENV=development && webpack",
+    "pbuild": "set NODE_ENV=production && webpack",
+    "serve": "node ./src/server.js",
+    "nserve": "nodemon ./src/server.js",
+    "dserve": "set NODE_ENV=debug && webpack && npm run serve",
+    "qserve": "set NODE_ENV=development && webpack && npm run serve",
+    "pserve": "set NODE_ENV=production && webpack && npm run serve",
+    "stage": "webpack && npm test && node ./src/server.js",
+    "start": "node ./src/server.js",
+    "prettier": "prettier r --config .prettierrc --write \"**/*.js*\"",
+    "pretty-quick": "pretty-quick --staged",
+    "kill": "taskkill /f /im node.exe"
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint --fix",
+      "git add"
+    ]
+  },
+  "author": "dzivenu",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-plugin-jest": "^22.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "expose-loader": "^0.7.5",
+    "file-loader": "^2.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "prettier": "^1.15.2",
+    "pretty-quick": "^1.8.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/runtime": "^7.1.5",
+    "dotenv": "^6.1.0",
+    "dsteem": "^0.8.7",
+    "jquery": "^3.3.1",
+    "mbuilder": "0.0.2",
+    "mtools": "0.0.2",
+    "semantic-ui-css": "^2.4.1",
+    "timeago.js": "^4.0.0-beta.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steem-command/www.git"
+  },
+  "keywords": [
+    "steem"
+  ],
+  "bugs": {
+    "url": "https://github.com/steem-command/www/issues"
+  },
+  "homepage": "https://github.com/steem-command/www#readme"
+}
