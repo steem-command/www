@@ -1,6 +1,6 @@
 {
   "name": "steem-cmd",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "[![Pull requests](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/peerquery/beta/pulls)\r [![Build status](https://travis-ci.org/peerquery/beta.svg?branch=master)](https://travis-ci.org/peerquery/beta)\r [![Dep tracker](https://david-dm.org/peerquery/beta.svg)](https://david-dm.org/peerquery/beta)\r [![Codebase license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/peerquery/beta/blob/master/LICENSE)\r [![Chat](https://img.shields.io/badge/Chat-Discord-ff69b4.svg)](https://https://discord.gg/xeSnGc8)",
   "main": "index.js",
   "directories": {
